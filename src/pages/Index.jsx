@@ -18,11 +18,11 @@ const Index = () => {
   useEffect(() => {
     // 加载所有 Markdown 内容
     Promise.all([
-      fetch('/src/content/about-us.md').then(res => res.text()),
-      fetch('/src/content/directions.md').then(res => res.text()),
-      fetch('/src/content/benefits.md').then(res => res.text()),
-      fetch('/src/content/achievements.md').then(res => res.text()),
-      fetch('/src/content/graduation.md').then(res => res.text()),
+      fetch('/content/about-us.md').then(res => res.text()),
+      fetch('/content/directions.md').then(res => res.text()),
+      fetch('/content/benefits.md').then(res => res.text()),
+      fetch('/content/achievements.md').then(res => res.text()),
+      fetch('/content/graduation.md').then(res => res.text()),
     ]).then(([about, dir, ben, ach, grad]) => {
       setAboutUs(about);
       setDirections(dir);

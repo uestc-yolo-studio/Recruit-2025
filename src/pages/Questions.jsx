@@ -18,32 +18,32 @@ const Questions = () => {
   const [selectedFrontendTopic, setSelectedFrontendTopic] = useState(null);
 
   useEffect(() => {
-    fetch('/src/content/frontend-questions.md')
+    fetch('/content/frontend-questions.md')
       .then(res => res.text())
       .then(text => setFrontendQuestions(text));
 
-    fetch('/src/content/backend-questions.md')
+    fetch('/content/backend-questions.md')
       .then(res => res.text())
       .then(text => setBackendQuestions(text));
 
-    fetch('/src/content/machine-learning-questions.md')
+    fetch('/content/machine-learning-questions.md')
       .then(res => res.text())
       .then(text => setMachineLearningQuestions(text));
 
     // 加载前端招新题的四个文档
-    fetch('/src/content/fronted-question/1.md')
+    fetch('/content/fronted-question/1.md')
       .then(res => res.text())
       .then(text => setHtmlContent(text));
 
-    fetch('/src/content/fronted-question/2.md')
+    fetch('/content/fronted-question/2.md')
       .then(res => res.text())
       .then(text => setCssContent(text));
 
-    fetch('/src/content/fronted-question/3.md')
+    fetch('/content/fronted-question/3.md')
       .then(res => res.text())
       .then(text => setJsContent(text));
 
-    fetch('/src/content/fronted-question/4.md')
+    fetch('/content/fronted-question/4.md')
       .then(res => res.text())
       .then(text => setPracticeContent(text));
   }, []);
