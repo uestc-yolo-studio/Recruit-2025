@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 100% 12%; /* #00183C */
+    --foreground: 180 100% 97%; /* #EEF9FF */
+    
+    --primary: 210 100% 33%; /* #0052AA */
+    --primary-foreground: 180 100% 97%; /* #EEF9FF */
+    
+    --secondary: 120 100% 89%; /* #C6FFC7 */
+    --secondary-foreground: 220 100% 12%; /* #00183C */
+    
+    --accent: 180 100% 84%; /* #ACFFF7 */
+    --accent-foreground: 220 100% 12%; /* #00183C */
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 180 100% 97%; /* #EEF9FF */
+
+    --border: 210 100% 33%; /* #0052AA */
+    --input: 210 100% 33%; /* #0052AA */
+    --ring: 210 100% 33%; /* #0052AA */
+    
+    --radius: 0.5rem;
+    
+    /* 自定义颜色变量 */
+    --gradient-from: 220 100% 12%; /* #00183C */
+    --gradient-via: 210 100% 33%; /* #0052AA */
+    --gradient-to: 180 100% 84%; /* #ACFFF7 */
+    --card-bg: 210 100% 33%; /* #0052AA */
+    --card-border: 210 100% 33%; /* #0052AA */
+    --text-primary: 180 100% 97%; /* #EEF9FF */
+    --text-secondary: 120 100% 89%; /* #C6FFC7 */
+    --text-accent: 180 100% 84%; /* #ACFFF7 */
+    --hover-bg: 210 100% 33%; /* #0052AA */
+    --hover-text: 180 100% 97%; /* #EEF9FF */
+    
+    /* 新配色方案 */
+    --color-blue: 199 88% 37%; /* #0c7eb4 */
+    --color-orange: 33 67% 67%; /* #e1aa70 */
+    --color-cyan: 186 23% 56%; /* #6da4aa */
+    --color-gold: 33 78% 54%; /* #e99a28 */
+    --color-light-cyan: 175 25% 74%; /* #a3d4d1 */
+  }
+
+  .dark {
+    --background: 0 0% 100%; /* #FFFFFF */
+    --foreground: 220 100% 12%; /* #00183C */
+    
+    --primary: 210 100% 33%; /* #0052AA */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --secondary: 220 100% 12%; /* #00183C */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --accent: 210 100% 33%; /* #0052AA */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+
+    --border: 210 100% 33%; /* #0052AA */
+    --input: 210 100% 33%; /* #0052AA */
+    --ring: 210 100% 33%; /* #0052AA */
+    
+    /* 自定义颜色变量 */
+    --gradient-from: 0 0% 100%; /* #FFFFFF */
+    --gradient-via: 210 100% 33%; /* #0052AA */
+    --gradient-to: 180 100% 84%; /* #ACFFF7 */
+    --card-bg: 210 100% 33%; /* #0052AA */
+    --card-border: 210 100% 33%; /* #0052AA */
+    --text-primary: 220 100% 12%; /* #00183C */
+    --text-secondary: 220 100% 12%; /* #00183C */
+    --text-accent: 210 100% 33%; /* #0052AA */
+    --hover-bg: 210 100% 33%; /* #0052AA */
+    --hover-text: 0 0% 100%; /* #FFFFFF */
+    
+    /* 新配色方案 */
+    --color-blue: 199 88% 37%; /* #0c7eb4 */
+    --color-orange: 33 67% 67%; /* #e1aa70 */
+    --color-cyan: 186 23% 56%; /* #6da4aa */
+    --color-gold: 33 78% 54%; /* #e99a28 */
+    --color-light-cyan: 175 25% 74%; /* #a3d4d1 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    font-weight: 600;
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
