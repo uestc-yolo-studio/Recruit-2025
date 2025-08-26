@@ -5,7 +5,7 @@ import AnimatedCard from '../components/AnimatedCard';
 import MarkdownRenderer from '../components/MarkdownRenderer';
 import GradientBackground from '../components/GradientBackground';
 import ColorInverseArea from '../components/ColorInverseArea';
-import { ArrowRight, Users, Code, Trophy, GraduationCap, Award, MapPin, Heart } from 'lucide-react';
+import { ArrowRight, Users, Code, Trophy, GraduationCap, Award, MapPin, Heart, ImageIcon } from 'lucide-react';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -119,6 +119,19 @@ const Index = () => {
             <AnimatedCard className="bg-gradient-to-r from-[#0c7eb4] via-[#0c7eb4]/90 to-[#0c7eb4] animate-gradient p-8 sm:p-10 lg:p-12 border-[#0c7eb4]/30">
               <div className="text-white text-base sm:text-lg leading-relaxed">
                 <MarkdownRenderer content={aboutUs} theme="blue" />
+              </div>
+              
+              {/* 照片墙入口 */}
+              <div className="mt-8 text-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-3 bg-white/20 hover:bg-white/30 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 border border-white/30 backdrop-blur-sm"
+                  onClick={() => navigate('/photos')}
+                >
+                  <ImageIcon className="w-5 h-5" />
+                  查看照片墙
+                </motion.button>
               </div>
             </AnimatedCard>
           </ColorInverseArea>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { BrainCircuitIcon, Github } from 'lucide-react';
+import { BrainCircuitIcon, Github, ImageIcon } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const Navigation = () => {
@@ -63,6 +63,20 @@ const Navigation = () => {
             >
               <BrainCircuitIcon className="w-4 h-4" />
               招新答题
+            </motion.button>
+
+            <motion.button
+              onClick={() => navigate('/photos')}
+              className={`px-4 py-2 rounded-xl text-sm sm:text-base font-medium transition-colors flex items-center gap-2 ${
+                location.pathname === '/photos' 
+                  ? 'text-white bg-white/30' 
+                  : 'text-white bg-white/20 hover:bg-white/30'
+              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <ImageIcon className="w-4 h-4" />
+              照片墙
             </motion.button>
 
             {/* GitHub Button */}
