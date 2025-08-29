@@ -203,18 +203,18 @@ const Index = () => {
           </ColorInverseArea>
         </motion.div>
 
-        {/* 毕业去向模块 - 浅青色主题 */}
+        {/* 发展路径模块 - 浅青色主题 */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0 }}
+          transition={{ delay: 0.9 }}
           className="mb-12 sm:mb-16"
         >
           <div className="text-center mb-6 sm:mb-8">
             <div className="w-12 h-12 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
               <GraduationCap className="w-6 h-6 text-[#a3d4d1]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white dark:text-[#2F4F4F]">毕业去向</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white dark:text-[#2F4F4F]">发展路径</h2>
           </div>
           <ColorInverseArea backgroundColor="#a3d4d1">
             <AnimatedCard className="bg-gradient-to-r from-[#a3d4d1] via-[#a3d4d1]/90 to-[#a3d4d1] animate-gradient p-8 sm:p-10 lg:p-12 border-[#a3d4d1]/30">
@@ -229,7 +229,7 @@ const Index = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
+          transition={{ delay: 1.1 }}
           className="text-center"
         >
           <ColorInverseArea backgroundColor="#0c7eb4">

@@ -30,6 +30,11 @@ const MarkdownRenderer = ({ content, theme = 'default' }) => {
       code: '#e99a28',
       link: '#ffffff',
     },
+    purple: {
+      strong: '#ffffff',
+      code: '#e1aa70',
+      link: '#ffffff',
+    },
     default: {
       strong: '#ffffff',
       code: '#e1aa70',
