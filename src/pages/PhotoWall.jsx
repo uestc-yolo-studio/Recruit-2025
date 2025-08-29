@@ -12,126 +12,94 @@ const PhotoWall = () => {
 
     // 照片数据 - 使用content/images中的照片，添加详细描述
     const photoData = [
+        // 新增的24级新同学见面会照片
         {
-            id: 1,
-            src: '/content/images/0260C1E1-AE33-4609-9FF4-21B1239D7A32_1_105_c.jpeg',
-            title: '工作室技术分享会',
-            description: '团队成员一起讨论最新的技术趋势和项目进展',
-            detailedDescription: '在这次技术分享会上，我们深入探讨了前端框架的发展趋势，分享了各自在项目中的经验和心得。大家积极交流，互相学习，展现了YOLO工作室浓厚的技术氛围。',
-            date: '2024年3月',
-            location: '工作室会议室',
-            participants: ['张三', '李四', '王五', '赵六'],
-            tags: ['技术分享', '团队建设', '学习交流'],
-            category: '技术活动'
-        },
-        {
-            id: 2,
-            src: '/content/images/106DBC37-9134-42E4-9A1F-3E15A537921A_1_105_c.jpeg',
-            title: '项目展示日',
-            description: '展示我们最新的项目成果和技术创新',
-            detailedDescription: '项目展示日是工作室的重要活动，每个团队都展示了他们的最新成果。从移动应用到Web平台，从AI算法到数据分析，展现了我们多元化的技术实力。',
-            date: '2024年2月',
-            location: '学校报告厅',
-            participants: ['全体成员'],
-            tags: ['项目展示', '技术创新', '成果汇报'],
-            category: '项目展示'
-        },
-        {
-            id: 3,
-            src: '/content/images/17DEB6CD-2499-4E37-9A92-88A8F3611863_1_105_c.jpeg',
-            title: '团队建设活动',
-            description: '增进团队友谊，提升团队凝聚力的户外活动',
-            detailedDescription: '这次团队建设活动让我们在轻松愉快的氛围中增进了彼此的了解。通过团队游戏和户外活动，我们不仅放松了身心，更重要的是加强了团队协作精神。',
-            date: '2024年1月',
-            location: '郊外公园',
-            participants: ['全体成员'],
-            tags: ['团队建设', '户外活动', '友谊增进'],
+            id: 11,
+            src: '/content/images/24-dinner-1.png',
+            title: '24级新同学见面会 - 初次相聚',
+            description: '欢迎24级新同学加入YOLO工作室大家庭',
+            detailedDescription: '这是我们为24级新同学举办的第一次见面会，大家围坐在一起，分享着对技术的热情和对未来的憧憬。新同学们带着好奇和期待的眼神，老成员们则热情地分享着工作室的故事和经验。这次见面会不仅让新同学们快速融入了团队，也为后续的合作奠定了良好的基础。',
+            date: '2024年11月',
+            location: '天食小馆',
+            participants: ['24级新同学', '老成员', '指导老师'],
+            tags: ['新同学见面', '团队融入', '友谊建立'],
             category: '团队活动'
         },
         {
-            id: 4,
-            src: '/content/images/5ECADC18-1447-4B21-80FE-539DA1E04CDF_1_105_c.jpeg',
-            title: '创新项目研讨会',
-            description: '探讨创新项目的发展方向和实施策略',
-            detailedDescription: '在创新项目研讨会上，我们深入分析了当前的技术发展趋势，讨论了如何将创新理念转化为实际项目。这次会议为我们的未来发展指明了方向。',
-            date: '2024年4月',
-            location: '工作室',
-            participants: ['核心成员'],
-            tags: ['创新研讨', '项目规划', '技术发展'],
+            id: 12,
+            src: '/content/images/24-dinner-2.png',
+            title: '24级新同学见面会 - 技术交流',
+            description: '新老成员进行深入的技术交流和经验分享',
+            detailedDescription: '在这次见面会上，我们特别安排了技术交流环节。老成员们分享了他们在项目开发中的经验和教训，新同学们也提出了自己对技术的理解和疑问。这种面对面的交流让知识传递更加直接有效，也让新同学们对工作室的技术氛围有了更深的认识。',
+            date: '2024年11月',
+            location: '天食小馆',
+            participants: ['24级新同学', '技术骨干', '项目负责人'],
+            tags: ['技术交流', '经验分享', '知识传递'],
             category: '技术活动'
         },
         {
-            id: 5,
-            src: '/content/images/66FFF7DC-E313-41AB-A6F1-41A6D402795C.jpeg',
-            title: '学习交流日',
-            description: '互相学习，共同进步的技术交流活动',
-            detailedDescription: '学习交流日是我们定期举办的活动，每个人都可以分享自己最近学习的新技术或解决的技术难题。这种开放的学习氛围让每个人都受益匪浅。',
-            date: '2024年3月',
-            location: '工作室',
-            participants: ['全体成员'],
-            tags: ['学习交流', '技术分享', '知识传递'],
-            category: '学习活动'
-        },
-        {
-            id: 6,
-            src: '/content/images/69761B93-9B5B-4196-A5DE-2F47D7965B83.jpeg',
-            title: '创新思维工作坊',
-            description: '激发创新灵感，培养创新思维的工作坊',
-            detailedDescription: '创新思维工作坊通过一系列创意练习和头脑风暴活动，帮助我们突破思维定式，激发创新灵感。这次活动让我们学会了从不同角度思考问题。',
-            date: '2024年2月',
-            location: '创意空间',
-            participants: ['新成员', '导师'],
-            tags: ['创新思维', '头脑风暴', '创意练习'],
-            category: '学习活动'
-        },
-        {
-            id: 7,
-            src: '/content/images/85FC4E4F-08A8-4FBF-82DF-C0F3C171D87B.jpeg',
-            title: '团队协作项目',
-            description: '齐心协力完成重要项目的团队协作场景',
-            detailedDescription: '在这个重要的团队协作项目中，每个人都发挥了自己的专长，通过有效的沟通和协作，我们成功完成了项目目标。这次经历让我们深刻体会到了团队合作的重要性。',
-            date: '2024年1月',
-            location: '项目现场',
-            participants: ['项目团队'],
-            tags: ['团队协作', '项目管理', '目标达成'],
-            category: '项目展示'
-        },
-        {
-            id: 8,
-            src: '/content/images/A193A592-E0CB-417E-9854-B683643533A6_1_105_c.jpeg',
-            title: '技术深度研讨',
-            description: '深入探讨技术问题，寻求最佳解决方案',
-            detailedDescription: '技术深度研讨是我们解决复杂技术问题的关键环节。通过深入的讨论和分析，我们不仅找到了问题的根源，还探索出了多种解决方案。',
-            date: '2024年4月',
-            location: '技术会议室',
-            participants: ['技术专家', '核心成员'],
-            tags: ['技术研讨', '问题解决', '深度分析'],
-            category: '技术活动'
-        },
-        {
-            id: 9,
-            src: '/content/images/C30E870A-0C56-40F5-BF87-F2FA1C946FCD_1_105_c.jpeg',
-            title: '成果展示会',
-            description: '展示我们的工作成果和技术创新',
-            detailedDescription: '成果展示会是我们向外界展示工作室实力和技术成果的重要平台。通过精心准备的展示，我们向观众展示了我们的技术实力和创新能力。',
-            date: '2024年3月',
-            location: '展示大厅',
-            participants: ['展示团队', '观众'],
-            tags: ['成果展示', '技术创新', '实力展示'],
-            category: '项目展示'
-        },
-        {
-            id: 10,
-            src: '/content/images/DD893315-9793-4AB2-B6D5-FD966E3481B2_1_105_c.jpeg',
-            title: '团队合影留念',
-            description: '记录美好时光，珍藏团队回忆',
-            detailedDescription: '这张合影记录了我们在一个重要项目完成后的喜悦时刻。每个人的笑容都洋溢着成就感，这是我们团队共同努力的见证，也是我们友谊的珍贵回忆。',
-            date: '2024年2月',
-            location: '工作室门口',
-            participants: ['全体成员'],
-            tags: ['团队合影', '美好回忆', '友谊见证'],
+            id: 13,
+            src: '/content/images/24-dinner-3.png',
+            title: '24级新同学见面会 - 团队合影',
+            description: '记录新老成员首次相聚的美好时刻',
+            detailedDescription: '这张合影记录了24级新同学加入后的第一次团队聚会。每个人的脸上都洋溢着笑容，新同学们虽然还有些腼腆，但已经感受到了团队的温暖。这次合影不仅是一个美好的回忆，更是新老成员友谊开始的见证。',
+            date: '2024年11月',
+            location: '天食小馆',
+            participants: ['全体24级新同学', '老成员代表', '指导老师'],
+            tags: ['团队合影', '新成员欢迎', '友谊见证'],
             category: '团队活动'
-        }
+        },
+        {
+            id: 14,
+            src: '/content/images/24-dinner-4.png',
+            title: '24级新同学见面会 - 项目介绍',
+            description: '向新同学介绍工作室的经典项目和未来规划',
+            detailedDescription: '在这次见面会上，我们向新同学们详细介绍了工作室的经典项目，包括智能校园导航系统、在线教育平台等。通过项目介绍，新同学们不仅了解了工作室的技术实力，也对未来的发展方向有了清晰的认识。',
+            date: '2024年11月',
+            location: '天食小馆',
+            participants: ['24级新同学', '项目负责人', '技术导师'],
+            tags: ['项目介绍', '技术展示', '发展规划'],
+            category: '项目展示'
+        },
+        {
+            id: 15,
+            src: '/content/images/24-dinner-5.png',
+            title: '24级新同学见面会 - 轻松交流',
+            description: '在轻松愉快的氛围中增进彼此了解',
+            detailedDescription: '见面会的最后环节是轻松的自由交流时间。大家围坐在一起，分享着各自的兴趣爱好、学习经历和对技术的理解。这种轻松的氛围让新同学们放下了紧张，真正融入了团队。',
+            date: '2024年11月',
+            location: '天食小馆',
+            participants: ['24级新同学', '老成员', '指导老师'],
+            tags: ['轻松交流', '友谊建立', '团队融入'],
+            category: '团队活动'
+        },
+        // 22级欢送会照片
+        {
+            id: 16,
+            src: '/content/images/22-send-party.png',
+            title: '22级欢送会 - 送别实习同学',
+            description: '为即将去实习的22级同学举办温馨的欢送会',
+            detailedDescription: '这是为22级即将去实习的同学举办的欢送会。大家聚在一起，回忆着一起奋斗的点点滴滴，分享着对未来的期待和祝福。虽然即将分别，但我们的友谊和技术交流永远不会停止。这次欢送会不仅是对过去时光的纪念，更是对未来重逢的期待。',
+            date: '2024年12月',
+            location: '红杏',
+            participants: ['22级实习同学', '全体成员', '指导老师'],
+            tags: ['欢送会', '实习送别', '友谊纪念'],
+            category: '团队活动'
+        },
+        // 24年招新宣讲会照片
+        {
+            id: 17,
+            src: '/content/images/24-recruit-speech.png',
+            title: '24年招新宣讲会 - 展示工作室魅力',
+            description: '向全校同学展示YOLO工作室的技术实力和发展前景',
+            detailedDescription: '这是2024年的招新宣讲会，我们向全校同学展示了YOLO工作室的技术实力、项目成果和发展前景。通过精彩的演讲和项目演示，我们吸引了众多对技术充满热情的同学。这次宣讲会不仅展示了我们的实力，也为工作室注入了新的活力。',
+            date: '2024年10月',
+            location: '二教',
+            participants: ['宣讲团队', '全校同学', '指导老师'],
+            tags: ['招新宣讲', '技术展示', '人才吸引'],
+            category: '技术活动'
+        },
+       
     ];
 
     useEffect(() => {
@@ -399,21 +367,7 @@ const PhotoWall = () => {
                                         ))}
                                     </div>
 
-                                    {/* 操作按钮 */}
-                                    <div className="flex justify-center gap-4 pt-4 border-t">
-                                        <button className="flex items-center gap-2 px-4 py-2 bg-[#0c7eb4] hover:bg-[#6da4aa] text-white rounded-lg transition-colors">
-                                            <Heart size={16} />
-                                            喜欢
-                                        </button>
-                                        <button className="flex items-center gap-2 px-4 py-2 bg-[#e1aa70] hover:bg-[#e99a28] text-white rounded-lg transition-colors">
-                                            <Share2 size={16} />
-                                            分享
-                                        </button>
-                                        <button className="flex items-center gap-2 px-4 py-2 bg-[#a3d4d1] hover:bg-[#6da4aa] text-white rounded-lg transition-colors">
-                                            <Download size={16} />
-                                            下载
-                                        </button>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
