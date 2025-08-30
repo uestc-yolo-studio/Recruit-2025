@@ -15,15 +15,31 @@
 
 文档不应该仅仅包含你的做题答案，还应该包含你做题时遇到的问题和解决的方式，我们更希望看到你的学习过程。
 
+## 学习资料
+> 这里只提供一些基础的学习资料，我们更希望你拥有自主学习的能力。
+- Git教程：https://www.runoob.com/git/git-tutorial.html
+- Java基础：https://www.runoob.com/java/java-tutorial.html
+- 数据库：https://www.bilibili.com/video/BV19d4y147Df/?spm_id_from=333.337.search-card.all.click&vd_source=7311946f005a2c588f22083c18a60dee
+- MySQL安装教程: https://cloud.tencent.com/developer/article/2392929
+- JavaWeb: https://www.bilibili.com/video/BV1CL4y1i7qR/?spm_id_from=333.337.search-card.all.click&vd_source=7311946f005a2c588f22083c18a60dee
+
+好用大模型推荐：
+- 文档处理：https://www.doubao.com/chat/
+- 代码编写：https://grok.com/
+- 上下文推理：https://www.deepseek.com/
+
+IDE插件推荐：
+- Trae
+
 ## 简介
 
-欢迎各位24级的各位同学点开YOLO工作室后端招新题，进入奇妙的Java世界。在这篇文档中我们将试图为你的Java学习做一些引导。加入工作室之后，更是有詹少😊雷神🤪郭神😍这种位面顶级大能为你提供Java指导，带你手撕面试，剑指offer！
+欢迎各位25级的各位同学点开YOLO工作室后端Java招新题，进入奇妙的Java世界。在这篇文档中我们将试图为你的Java学习做一些引导。加入工作室之后，更是有詹少😊雷神🤪郭神😍这种位面顶级大能为你提供Java指导，带你手撕面试，剑指offer！
 
 Java是一门面向对象的编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程
 
 本次题目包括JAVA基础、对象、数据结构、数据库、系统设计五个部分。标记有选做的部分可以学有余力再行尝试。如果对题目有什么疑问，或者需要一些引导，可以私戳本部分的出题人（在标题处可以看到）。
 
-尽管我们在文末贴出了相关的一些学习资料，但是也请你不要将眼光局限于这些资料。善用搜索引擎，在网络上高效地检索信息是程序员的必备技能！
+尽管我们在开头贴出了相关的一些学习资料，但是也请你不要将眼光局限于这些资料。善用搜索引擎，在网络上高效地检索信息是程序员的必备技能！
 
 招新题完成数量不设指标，只要我们能从中看出你的学习能力、学习态度，你就有可能被选中,加入光荣的进化YOLO工作室！
 
