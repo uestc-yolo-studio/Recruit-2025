@@ -431,21 +431,21 @@ func main() {
 3. 新建几张表，每张表的结构如下图
 
 **学生表(students)**
-<img width="776" height="275" alt="学生表" src="/content/images/students-table.png" />
+![学生表](/backend-images/students-table.png)
 
 ![img](https://dcn2187ziwgk.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDVjYTYzNTM3NmNjNTFmOTI2MjUxYjBjNGE5NGQ2MTVfM1FPa0xGY0VtS0ZyMGQxbEd0Z01PdElyOHFqNFJoWW5fVG9rZW46VTdmeWIySFdLb2lCUkt4RWxIcmNMaXlFbkVlXzE3NTY2MjEwNDc6MTc1NjYyNDY0N19WNA)
 
 **班级表(classes)**
-<img width="582" height="167" alt="班级表" src="/content/images/classes-table.png" />
+![班级表](/backend-images/classes-table.png)
 
 **教师表(teachers)**
-<img width="585" height="162" alt="教师表" src="/content/images/teachers-table.png" />
+![教师表](/backend-images/teachers-table.png)
 
 **课程表(courses)**
-<img width="551" height="217" alt="课程表" src="/content/images/courses-table.png" />
+![课程表](/backend-images/courses-table.png)
 
 **成绩表(scores)**
-<img width="627" height="537" alt="分数表" src="/content/images/scores-table.png" />
+![分数表](/backend-images/scores-table.png)
 
 ### 1.4.2 场景一：基础数据查询
 

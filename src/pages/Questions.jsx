@@ -30,7 +30,7 @@ const Questions = () => {
       .then(res => res.text())
       .then(text => setBackendQuestions(text));
 
-    fetch('/content/machine-learning-questions.md')
+    fetch('/content/machine learning/machine-learning 24c71faf989a815eafa3f82916c686e2.md')
       .then(res => res.text())
       .then(text => setMachineLearningQuestions(text));
 

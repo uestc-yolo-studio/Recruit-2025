@@ -121,28 +121,56 @@ const MarkdownRenderer = ({ content, theme = 'default' }) => {
   }
 
   return (
-    <div className="max-w-none text-sm sm:text-base lg:text-lg text-white leading-relaxed">
+    <div className="max-w-none text-sm sm:text-base lg:text-lg text-white leading-relaxed bg-gray-800/30 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/5 shadow-xl">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
           h1: ({children}) => (
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 mt-8 sm:mt-10 first:mt-0">
-              {children}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8 mt-10 sm:mt-12 first:mt-0 relative">
+              <div className="absolute inset-0 bg-blue-300/30 rounded-lg border border-blue-300/50 shadow-lg"></div>
+              <div className="relative z-10 px-4 sm:px-6 py-3 sm:py-4 flex items-center">
+                <div className="w-2 h-2 sm:w-3 sm:h-3 bg-blue-300 rounded-full mr-3 sm:mr-4 animate-pulse"></div>
+                <span className="text-blue-200 font-bold">
+                  {children}
+                </span>
+                <div className="flex-1 h-px bg-blue-300/50 ml-4 sm:ml-6"></div>
+              </div>
             </h1>
           ),
           h2: ({children}) => (
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 mt-6 sm:mt-8 first:mt-0">
-              {children}
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 mt-8 sm:mt-10 first:mt-0 relative">
+              <div className="absolute inset-0 bg-orange-400/20 rounded-lg border border-orange-400/35 shadow-md"></div>
+              <div className="relative z-10 px-3 sm:px-5 py-2 sm:py-3 flex items-center">
+                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-400 rounded-full mr-2 sm:mr-3"></div>
+                <span className="text-orange-300 font-bold">
+                  {children}
+                </span>
+                <div className="flex-1 h-px bg-orange-400/35 ml-3 sm:ml-4"></div>
+              </div>
             </h2>
           ),
           h3: ({children}) => (
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3 mt-4 sm:mt-6 first:mt-0">
-              {children}
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4 mt-6 sm:mt-8 first:mt-0 relative">
+              <div className="absolute inset-0 bg-cyan-300/20 rounded-lg border border-cyan-300/30 shadow-md"></div>
+              <div className="relative z-10 px-2 sm:px-4 py-1.5 sm:py-2 flex items-center">
+                <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-cyan-300 rounded-full mr-2 sm:mr-3"></div>
+                <span className="text-cyan-200 font-semibold">
+                  {children}
+                </span>
+                <div className="flex-1 h-px bg-cyan-300/35 ml-2 sm:ml-3"></div>
+              </div>
             </h3>
           ),
           h4: ({children}) => (
-            <h4 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 mt-4 sm:mt-6 first:mt-0">
-              {children}
+            <h4 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 mt-4 sm:mt-6 first:mt-0 relative">
+              <div className="absolute inset-0 bg-amber-400/15 rounded-lg border border-amber-400/25 shadow-sm"></div>
+              <div className="relative z-10 px-2 sm:px-3 py-1 sm:py-1.5 flex items-center">
+                <div className="w-0.5 h-0.5 sm:w-1 sm:h-1 bg-amber-400 rounded-full mr-1.5 sm:mr-2"></div>
+                <span className="text-amber-300 font-semibold">
+                  {children}
+                </span>
+                <div className="flex-1 h-px bg-amber-400/30 ml-1.5 sm:ml-2"></div>
+              </div>
             </h4>
           ),
           h5: ({children}) => (

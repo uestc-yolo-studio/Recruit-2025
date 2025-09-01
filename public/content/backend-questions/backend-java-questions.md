@@ -395,6 +395,23 @@ Java是一门面向对象的编程语言，不仅吸收了C++语言的各种优�
 
 该档案库中存放着五大卷宗：**学生表(students)**, **班级表(classes)**, **教师表(teachers)**, **课程表(courses)**, **成绩表(scores)**。
 
+**表结构参考：**
+
+**学生表(students)**
+![学生表](/backend-images/students-table.png)
+
+**班级表(classes)**
+![班级表](/backend-images/classes-table.png)
+
+**教师表(teachers)**
+![教师表](/backend-images/teachers-table.png)
+
+**课程表(courses)**
+![课程表](/backend-images/courses-table.png)
+
+**成绩表(scores)**
+![分数表](/backend-images/scores-table.png)
+
 **你的咒语试炼：**
 
 - **基础咒语练习：**
