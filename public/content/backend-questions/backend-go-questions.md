@@ -426,24 +426,21 @@ func main() {
 3. 新建几张表，每张表的结构如下图
 
 **学生表(students)**
+<img width="776" height="275" alt="学生表" src="https://github.com/user-attachments/assets/c72ae274-0e44-42b1-b0a3-5fa2677e89ba" />
 
 ![img](https://dcn2187ziwgk.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDVjYTYzNTM3NmNjNTFmOTI2MjUxYjBjNGE5NGQ2MTVfM1FPa0xGY0VtS0ZyMGQxbEd0Z01PdElyOHFqNFJoWW5fVG9rZW46VTdmeWIySFdLb2lCUkt4RWxIcmNMaXlFbkVlXzE3NTY2MjEwNDc6MTc1NjYyNDY0N19WNA)
 
 **班级表(classes)**
-
-![img](https://dcn2187ziwgk.feishu.cn/space/api/box/stream/download/asynccode/?code=YjMwMGRjZjBiYWU3YjMzOTc2OWYyOGIxMzFmODhjNTdfZEROYzZKTFFpYmFxOG5qaUNvY3p6TXg3Z2gzVFpJYjdfVG9rZW46Q1BJNGJxMmllb1JLOXd4T0t2eGM3WURRbmJoXzE3NTY2MjEwNDc6MTc1NjYyNDY0N19WNA)
+<img width="582" height="167" alt="班级表" src="https://github.com/user-attachments/assets/c6bd7bca-fb94-4d96-bf57-6000ed9ecf2d" />
 
 **教师表(teachers)**
-
-![img](https://dcn2187ziwgk.feishu.cn/space/api/box/stream/download/asynccode/?code=OWRmOTViZDc3MGM1NTE5ZjEwMTU1YTMyZjNiMzQ4Y2FfejJLemtEY2dvRU1YU0IxZkVkN0lNcXM0YXlDMmdRSUZfVG9rZW46RHJIWWJFRVlHb0xRODd4SFNEM2NTT3BGbmhoXzE3NTY2MjEwNDc6MTc1NjYyNDY0N19WNA)
+<img width="585" height="162" alt="教师表" src="https://github.com/user-attachments/assets/db7413b8-fc84-4089-b324-fa9ce5a7d307" />
 
 **课程表(courses)**
-
-![img](https://dcn2187ziwgk.feishu.cn/space/api/box/stream/download/asynccode/?code=NzViMTE2MjcyZDRiODQ0MTExNmM2NTMyYzlmOWI2NDdfMzJKeGRZNW1DY0NBdGQ0ZjRnVXpUWGlFeFlWRGVJYnNfVG9rZW46VmtPN2J1NzVmb2dlRkt4WG16NmNPaEI5blRnXzE3NTY2MjEwNDc6MTc1NjYyNDY0N19WNA)
+<img width="551" height="217" alt="课程表" src="https://github.com/user-attachments/assets/0935a162-c3d5-4119-9002-10e5e61f28d2" />
 
 **成绩表(scores)**
-
-![img](https://dcn2187ziwgk.feishu.cn/space/api/box/stream/download/asynccode/?code=YTBkMDIxNmNlNWQ5MDAwNWRlNzU4MjUzMTAzNTgxZWVfTVZEYmdha3UyRk5aZ05wSTdPTlYwZWw2V1lWZ2l4NkZfVG9rZW46UG05NmJZclI1b0p0R0d4N010M2N3b2lCblhjXzE3NTY2MjEwNDc6MTc1NjYyNDY0N19WNA)
+<img width="627" height="537" alt="分数表" src="https://github.com/user-attachments/assets/342c2987-9a05-4825-a8ca-5670a3b10813" />
 
 ### 1.4.2 场景一：基础数据查询
 
