@@ -59,9 +59,9 @@ const Index = () => {
 
   return (
     <GradientBackground>
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+      <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8 md:py-12 lg:py-16">
         {/* 主标题区域 */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
           {/* 圆形Logo */}
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
@@ -72,14 +72,14 @@ const Index = () => {
               transition: { duration: 0.6, type: "spring" }
             }}
             transition={{ duration: 0.8, type: "spring" }}
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mx-auto mb-8 relative z-10 cursor-pointer"
+            className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 mx-auto mb-6 sm:mb-8 relative z-10 cursor-pointer"
           >
             <div className="relative w-full h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-[#0c7eb4] to-[#6da4aa] rounded-full opacity-20 blur-xl animate-pulse" />
               <img
                 src="/yoloLogo.svg"
                 alt="YOLO Studio Logo"
-                className="w-full h-full object-cover rounded-full border-4 border-white/30 shadow-2xl relative z-20"
+                className="w-full h-full object-cover rounded-full border-2 sm:border-4 border-white/30 shadow-2xl relative z-20"
               />
             </div>
           </motion.div>
@@ -88,7 +88,7 @@ const Index = () => {
             variants={titleVariants}
             initial="hidden"
             animate="visible"
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 sm:mb-4 text-[hsl(var(--text-primary))] drop-shadow-lg tracking-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-2 sm:mb-3 md:mb-4 text-[hsl(var(--text-primary))] drop-shadow-lg tracking-tight px-2"
           >
             YOLO工作室招新
           </motion.h1>
@@ -96,7 +96,7 @@ const Index = () => {
             variants={subtitleVariants}
             initial="hidden"
             animate="visible"
-            className="text-xl sm:text-2xl lg:text-3xl text-[hsl(var(--text-secondary))] drop-shadow px-4 font-medium"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[hsl(var(--text-secondary))] drop-shadow px-2 sm:px-4 font-medium"
           >
             You Only Live Once
           </motion.p>
@@ -107,29 +107,29 @@ const Index = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mb-12 sm:mb-16"
+          className="mb-8 sm:mb-12 md:mb-16"
         >
-          <div className="text-center mb-6 sm:mb-8">
-            <div className="w-12 h-12 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-              <MapPin className="w-6 h-6 text-[#0c7eb4]" />
+          <div className="text-center mb-4 sm:mb-6 md:mb-8">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-[#0c7eb4]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white dark:text-[#0c7eb4]">关于我们</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-[#0c7eb4]">关于我们</h2>
           </div>
           <ColorInverseArea backgroundColor="#0c7eb4">
-            <AnimatedCard className="bg-gradient-to-r from-[#0c7eb4] via-[#0c7eb4]/90 to-[#0c7eb4] animate-gradient p-8 sm:p-10 lg:p-12 border-[#0c7eb4]/30">
-              <div className="text-white text-base sm:text-lg leading-relaxed">
+            <AnimatedCard className="bg-gradient-to-r from-[#0c7eb4] via-[#0c7eb4]/90 to-[#0c7eb4] animate-gradient p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 border-[#0c7eb4]/30">
+              <div className="text-white text-sm sm:text-base md:text-lg leading-relaxed">
                 <MarkdownRenderer content={aboutUs} theme="blue" />
               </div>
               
               {/* 照片墙入口 */}
-              <div className="mt-8 text-center">
+              <div className="mt-6 sm:mt-8 text-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-3 bg-white/20 hover:bg-white/30 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 border border-white/30 backdrop-blur-sm"
+                  className="inline-flex items-center gap-2 sm:gap-3 bg-white/20 hover:bg-white/30 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-full transition-all duration-300 border border-white/30 backdrop-blur-sm text-sm sm:text-base"
                   onClick={() => navigate('/photos')}
                 >
-                  <ImageIcon className="w-5 h-5" />
+                  <ImageIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                   查看照片墙
                 </motion.button>
               </div>
@@ -142,17 +142,17 @@ const Index = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="mb-12 sm:mb-16"
+          className="mb-8 sm:mb-12 md:mb-16"
         >
-          <div className="text-center mb-6 sm:mb-8">
-            <div className="w-12 h-12 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-              <Code className="w-6 h-6 text-[#6da4aa]" />
+          <div className="text-center mb-4 sm:mb-6 md:mb-8">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <Code className="w-5 h-5 sm:w-6 sm:h-6 text-[#6da4aa]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white dark:text-[#6da4aa]">聚焦方向</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-[#6da4aa]">聚焦方向</h2>
           </div>
           <ColorInverseArea backgroundColor="#6da4aa">
-            <AnimatedCard className="bg-gradient-to-r from-[#6da4aa] via-[#6da4aa]/90 to-[#6da4aa] animate-gradient p-8 sm:p-10 lg:p-12 border-[#6da4aa]/30">
-              <div className="text-white text-base sm:text-lg leading-relaxed">
+            <AnimatedCard className="bg-gradient-to-r from-[#6da4aa] via-[#6da4aa]/90 to-[#6da4aa] animate-gradient p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 border-[#6da4aa]/30">
+              <div className="text-white text-sm sm:text-base md:text-lg leading-relaxed">
                 <MarkdownRenderer content={directions} theme="cyan" />
               </div>
             </AnimatedCard>
@@ -164,17 +164,17 @@ const Index = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="mb-12 sm:mb-16"
+          className="mb-8 sm:mb-12 md:mb-16"
         >
-          <div className="text-center mb-6 sm:mb-8">
-            <div className="w-12 h-12 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-              <Users className="w-6 h-6 text-[#e1aa70]" />
+          <div className="text-center mb-4 sm:mb-6 md:mb-8">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <Users className="w-5 h-5 sm:w-6 sm:h-6 text-[#e1aa70]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white dark:text-[#8B4513]">加入我们，你可以获得</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-[#8B4513]">加入我们，你可以获得</h2>
           </div>
           <ColorInverseArea backgroundColor="#e1aa70">
-            <AnimatedCard className="bg-gradient-to-r from-[#e1aa70] via-[#e1aa70]/90 to-[#e1aa70] animate-gradient p-8 sm:p-10 lg:p-12 border-[#e1aa70]/30">
-              <div className="text-white text-base sm:text-lg leading-relaxed">
+            <AnimatedCard className="bg-gradient-to-r from-[#e1aa70] via-[#e1aa70]/90 to-[#e1aa70] animate-gradient p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 border-[#e1aa70]/30">
+              <div className="text-white text-sm sm:text-base md:text-lg leading-relaxed">
                 <MarkdownRenderer content={benefits} theme="orange" />
               </div>
             </AnimatedCard>
@@ -186,17 +186,17 @@ const Index = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="mb-12 sm:mb-16"
+          className="mb-8 sm:mb-12 md:mb-16"
         >
-          <div className="text-center mb-6 sm:mb-8">
-            <div className="w-12 h-12 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-              <Trophy className="w-6 h-6 text-[#e99a28]" />
+          <div className="text-center mb-4 sm:mb-6 md:mb-8">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-[#e99a28]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white dark:text-[#8B4513]">获奖情况</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-[#8B4513]">获奖情况</h2>
           </div>
           <ColorInverseArea backgroundColor="#e99a28">
-            <AnimatedCard className="bg-gradient-to-r from-[#e99a28] via-[#e99a28]/90 to-[#e99a28] animate-gradient p-8 sm:p-10 lg:p-12 border-[#e99a28]/30">
-              <div className="text-white text-base sm:text-lg leading-relaxed">
+            <AnimatedCard className="bg-gradient-to-r from-[#e99a28] via-[#e99a28]/90 to-[#e99a28] animate-gradient p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 border-[#e99a28]/30">
+              <div className="text-white text-sm sm:text-base md:text-lg leading-relaxed">
                 <MarkdownRenderer content={achievements} theme="gold" />
               </div>
             </AnimatedCard>

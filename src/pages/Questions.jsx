@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedCard from '../components/AnimatedCard';
 import MarkdownRenderer from '../components/MarkdownRenderer';
 import OwlAnimation from '../components/OwlAnimation';
 import GradientBackground from '../components/GradientBackground';
 import ColorInverseArea from '../components/ColorInverseArea';
+import { ChevronLeft, Home } from 'lucide-react';
 
 const Questions = () => {
   const [frontendQuestions, setFrontendQuestions] = useState('');
@@ -91,7 +92,7 @@ const Questions = () => {
     }
   ];
 
-  const backendTopics = [
+  const backendTopics = useMemo(() => [
     {
       id: 'java',
       title: 'Java方向：构建宠物数字世界',
@@ -106,7 +107,7 @@ const Questions = () => {
       color: '#e99a28',
       content: goQuestions
     }
-  ];
+  ], [javaQuestions, goQuestions]);
 
   const getContent = () => {
     if (selectedDirection === 'frontend' && selectedFrontendTopic) {
