@@ -271,6 +271,31 @@ const MarkdownRenderer = ({ content, theme = 'default' }) => {
               {children}
             </td>
           ),
+          img: ({src, alt, width, height}) => (
+            <div className="my-4 sm:my-6 text-center">
+              <img 
+                src={src} 
+                alt={alt || '图片'} 
+                width={width} 
+                height={height}
+                className="max-w-full h-auto rounded-lg border border-white/20 shadow-lg mx-auto"
+                onError={(e) => {
+                  console.warn(`图片加载失败: ${src}`);
+                  e.target.style.display = 'none';
+                  // 显示错误提示
+                  const errorDiv = document.createElement('div');
+                  errorDiv.className = 'text-red-400 text-sm p-2 bg-red-900/20 rounded border border-red-500/30';
+                  errorDiv.textContent = `图片加载失败: ${alt || '未知图片'}`;
+                  e.target.parentNode.appendChild(errorDiv);
+                }}
+              />
+              {alt && (
+                <p className="text-white/70 text-xs sm:text-sm mt-2 text-center">
+                  {alt}
+                </p>
+              )}
+            </div>
+          ),
         }}
       >
         {content}
