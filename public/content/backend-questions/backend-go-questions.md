@@ -426,21 +426,21 @@ func main() {
 3. 新建几张表，每张表的结构如下图
 
 **学生表(students)**
-<img width="776" height="275" alt="学生表" src="https://github.com/user-attachments/assets/c72ae274-0e44-42b1-b0a3-5fa2677e89ba" />
+<img width="776" height="275" alt="学生表" src="/content/images/students-table.png" />
 
 ![img](https://dcn2187ziwgk.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDVjYTYzNTM3NmNjNTFmOTI2MjUxYjBjNGE5NGQ2MTVfM1FPa0xGY0VtS0ZyMGQxbEd0Z01PdElyOHFqNFJoWW5fVG9rZW46VTdmeWIySFdLb2lCUkt4RWxIcmNMaXlFbkVlXzE3NTY2MjEwNDc6MTc1NjYyNDY0N19WNA)
 
 **班级表(classes)**
-<img width="582" height="167" alt="班级表" src="https://github.com/user-attachments/assets/c6bd7bca-fb94-4d96-bf57-6000ed9ecf2d" />
+<img width="582" height="167" alt="班级表" src="/content/images/classes-table.png" />
 
 **教师表(teachers)**
-<img width="585" height="162" alt="教师表" src="https://github.com/user-attachments/assets/db7413b8-fc84-4089-b324-fa9ce5a7d307" />
+<img width="585" height="162" alt="教师表" src="/content/images/teachers-table.png" />
 
 **课程表(courses)**
-<img width="551" height="217" alt="课程表" src="https://github.com/user-attachments/assets/0935a162-c3d5-4119-9002-10e5e61f28d2" />
+<img width="551" height="217" alt="课程表" src="/content/images/courses-table.png" />
 
 **成绩表(scores)**
-<img width="627" height="537" alt="分数表" src="https://github.com/user-attachments/assets/342c2987-9a05-4825-a8ca-5670a3b10813" />
+<img width="627" height="537" alt="分数表" src="/content/images/scores-table.png" />
 
 ### 1.4.2 场景一：基础数据查询
 
