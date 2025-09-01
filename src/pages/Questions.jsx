@@ -14,8 +14,11 @@ const Questions = () => {
   const [cssContent, setCssContent] = useState('');
   const [jsContent, setJsContent] = useState('');
   const [practiceContent, setPracticeContent] = useState('');
+  const [javaQuestions, setJavaQuestions] = useState('');
+  const [goQuestions, setGoQuestions] = useState('');
   const [selectedDirection, setSelectedDirection] = useState(null);
   const [selectedFrontendTopic, setSelectedFrontendTopic] = useState(null);
+  const [selectedBackendTopic, setSelectedBackendTopic] = useState(null);
 
   useEffect(() => {
     fetch('/content/frontend-questions.md')
@@ -46,6 +49,15 @@ const Questions = () => {
     fetch('/content/fronted-question/4.md')
       .then(res => res.text())
       .then(text => setPracticeContent(text));
+
+    // 加载后端招新题的两个文档
+    fetch('/content/backend-questions/backend-java-questions.md')
+      .then(res => res.text())
+      .then(text => setJavaQuestions(text));
+
+    fetch('/content/backend-questions/backend-go-questions.md')
+      .then(res => res.text())
+      .then(text => setGoQuestions(text));
   }, []);
 
   const frontendTopics = [
@@ -79,9 +91,31 @@ const Questions = () => {
     }
   ];
 
+  const backendTopics = [
+    {
+      id: 'java',
+      title: 'Java方向：构建宠物数字世界',
+      description: '从零开始学习Java，构建完整的后端系统',
+      color: '#6da4aa',
+      content: javaQuestions
+    },
+    {
+      id: 'go',
+      title: 'Go方向：打造高并发短链接服务',
+      description: '学习Go语言，构建高性能的微服务',
+      color: '#e99a28',
+      content: goQuestions
+    }
+  ];
+
   const getContent = () => {
     if (selectedDirection === 'frontend' && selectedFrontendTopic) {
       const topic = frontendTopics.find(t => t.id === selectedFrontendTopic);
+      return topic ? topic.content : '';
+    }
+    
+    if (selectedDirection === 'backend' && selectedBackendTopic) {
+      const topic = backendTopics.find(t => t.id === selectedBackendTopic);
       return topic ? topic.content : '';
     }
     
@@ -101,6 +135,11 @@ const Questions = () => {
       return topic ? topic.color : '#0c7eb4';
     }
     
+    if (selectedDirection === 'backend' && selectedBackendTopic) {
+      const topic = backendTopics.find(t => t.id === selectedBackendTopic);
+      return topic ? topic.color : '#6da4aa';
+    }
+    
     if (selectedDirection === 'frontend') return '#0c7eb4';
     if (selectedDirection === 'backend') return '#6da4aa';
     if (selectedDirection === 'machine-learning') return '#e99a28';
@@ -110,6 +149,8 @@ const Questions = () => {
   const handleBack = () => {
     if (selectedDirection === 'frontend' && selectedFrontendTopic) {
       setSelectedFrontendTopic(null);
+    } else if (selectedDirection === 'backend' && selectedBackendTopic) {
+      setSelectedBackendTopic(null);
     } else {
       setSelectedDirection(null);
     }
@@ -201,6 +242,48 @@ const Questions = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     onClick={() => setSelectedFrontendTopic(topic.id)}
+                    className="cursor-pointer"
+                  >
+                    <AnimatedCard 
+                      className="animate-gradient p-6 sm:p-8 h-full"
+                      style={{
+                        background: `linear-gradient(to right, ${topic.color}, ${topic.color}e6, ${topic.color})`,
+                        borderColor: `${topic.color}4d`
+                      }}>
+                      <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white text-center tracking-tight">
+                        {topic.title}
+                      </h3>
+                      <p className="text-white text-sm sm:text-base text-center font-medium">
+                        {topic.description}
+                      </p>
+                    </AnimatedCard>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ) : selectedDirection === 'backend' && !selectedBackendTopic ? (
+            // 后端方向选择页面
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="max-w-4xl mx-auto"
+            >
+              <button
+                onClick={handleBack}
+                className="mb-4 sm:mb-6 text-[hsl(var(--text-primary))] hover:text-[#e1aa70] text-base sm:text-lg font-medium"
+              >
+                ← 返回选择
+              </button>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                {backendTopics.map((topic, index) => (
+                  <motion.div
+                    key={topic.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    onClick={() => setSelectedBackendTopic(topic.id)}
                     className="cursor-pointer"
                   >
                     <AnimatedCard 
