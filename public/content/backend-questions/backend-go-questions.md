@@ -1,4 +1,9 @@
 # 后端GO方向考核题
+
+## 提交方式
+参考：https://github.com/uestc-yolo-studio/Recruit-2025-Record
+
+## 欢迎开始GO的学习
 > 从零到一，铸造你的第一个高并发短链接服务
 
 **嘿，未来的顶尖工程师！**
