@@ -3,6 +3,7 @@ import Index from "./pages/Index.jsx";
 import CountdownPage from "./pages/CountdownPage.jsx";
 import Questions from "./pages/Questions.jsx";
 import PhotoWall from "./pages/PhotoWall.jsx";
+import { getEncryptedRoute } from "./lib/hashUtils.js";
 
 export const navItems = [
   {
@@ -28,7 +29,7 @@ export const navItems = [
 // 添加真正的招新题页面路由（不显示在导航中）
 export const hiddenRoutes = [
   {
-    to: "/recruit-questions",
+    to: getEncryptedRoute(),
     page: <Questions />,
   },
 ];

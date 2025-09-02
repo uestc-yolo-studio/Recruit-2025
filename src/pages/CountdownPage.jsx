@@ -5,6 +5,7 @@ import { Lock, Clock, ArrowRight } from 'lucide-react';
 import AnimatedCard from '../components/AnimatedCard';
 import GradientBackground from '../components/GradientBackground';
 import OwlAnimation from '../components/OwlAnimation';
+import { getEncryptedRoute } from '../lib/hashUtils';
 
 const CountdownPage = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -33,17 +34,15 @@ const CountdownPage = () => {
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
         setTimeLeft({ days, hours, minutes, seconds });
-        
-        // 调试信息
-        console.log('倒计时更新:', { days, hours, minutes, seconds });
       } else {
         // 时间到了，自动进入招新题页面
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        console.log('倒计时结束，自动进入');
         
         // 延迟1秒后自动跳转，给用户一个视觉反馈
         setTimeout(() => {
-          navigate('/recruit-questions');
+          // 设置访问权限标记
+          localStorage.setItem('yolo-recruit-access', 'granted');
+          navigate(getEncryptedRoute());
         }, 1000);
       }
     }, 1000);
@@ -70,8 +69,9 @@ const CountdownPage = () => {
     // 模拟验证延迟
     setTimeout(() => {
       if (passcode === 'YouOnlyLiveOnce0908') {
-        // 验证成功，跳转到真正的招新题页面
-        navigate('/recruit-questions');
+        // 验证成功，设置访问权限标记并跳转到真正的招新题页面
+        localStorage.setItem('yolo-recruit-access', 'granted');
+        navigate(getEncryptedRoute());
       } else {
         setError('通行码错误，请重新输入');
       }
