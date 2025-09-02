@@ -4,15 +4,44 @@
 
 ### 提交地址
 
-(提交后请确保收到确认回复)
+参考：https://github.com/uestc-yolo-studio/Recruit-2025-Record
 
 ### 提交要求
 
-请将文件按照题目分成不同文件夹，文件夹命名方式为ML＋本题序号（如第一题文件夹名字应该为`ML01`）。在每个文件夹里，应该有本题的源代码`.py`文件，并且有包含编译运行结果的截图以及思考题答案的pdf文件（为美观，可先写markdown文档，再由markdown转换成pdf文件），文件命名方式同上（如第一题文件夹里应包含`ML01.py`和`ML01.pdf`），最后打包成`.7z`压缩包，重命名为`学号-姓名-ML`（如`2024090901001-灵梦-ML`）
+结构示例如下
+
+```bash
+├── .github
+├── Backend  
+├── Frontend
+├── MachineLearning // 选择MachineLearning方向文件夹
+│   └── XiaomingLi-2025090903015  // 第一层：姓名+学号（唯一标识，避免重名）
+│       ├── assets  // 第二层：专门存放图片资源
+│       │   ├── question1
+│       │   │   ├── running.png  // 清晰命名，对应题目
+│       │   │   ├── error.png
+│       │   │   └── result.png
+│       │   └── question2
+│       │       └── result.png
+│       ├── question1  // 第二层：每个题目单独一个文件夹，里面放markdown和代码
+|       |	├── question1.md
+|		|	└── code.zip
+│       ├── question2  
+|       |	├── question2.md
+|		|	└── code.zip
+|		└── question3  
+|       	├── question3.md
+|			└── code.zip
+├── Tool
+├── .gitignore
+└── README.md
+```
+
+
 
 ## 引入
 
-![Evolutionary_Tree.png](/content/machine%20learning/Evolutionary_Tree.png)
+![Evolutionary_Tree.png](Evolutionary_Tree.png)
 
 实践是检验真理的唯一标准，自从2022年11月30日ChatGPT发布以来，大语言模型已经遍地开花，站在浪潮之上，得益于开源精神，我们每个人都能掌握其中的原理
 
@@ -73,7 +102,7 @@ PyTorch框架本身基于python语法格式，python作为解释性语言，性�
 
 ### 任务一：梯度下降——灵梦与魔理沙的结界修复
 
-![Reimu_and_Marisa.png](/content/machine%20learning/Reimu_and_Marisa.png)
+![Reimu_and_Marisa.png](Reimu_and_Marisa.png)
 
 最近博丽神社的结界突然出现了异常，灵梦发现结界能量不稳，周围的灵力波动时强时弱。为了防止神社被灵力暴走毁坏，灵梦决定必须找到结界的最小能量点，稳定它的力量。她找来了擅长各种复杂魔法计算的魔理沙帮忙。
 
@@ -138,7 +167,7 @@ PyTorch框架本身基于python语法格式，python作为解释性语言，性�
 
 ### 任务三（附加题）：GPT-2——灵梦的AI交流计划
 
-![miku.png](/content/machine%20learning/miku.png)
+![miku.png](miku.png)
 
 某天，博丽神社的巫女博丽灵梦在闲暇时意外听说外界有一位虚拟歌手，名叫初音未来。她以非凡的歌声和独特的魅力，在外界深受人类喜爱。灵梦对这个虚拟偶像产生了极大的兴趣，心想着，能和这个“虚拟存在”交流应该是件非常有趣的事，于是她决定：**构建一个GPT-2模型**，让她可以与初音未来真正进行互动！
 
@@ -171,7 +200,7 @@ PyTorch框架本身基于python语法格式，python作为解释性语言，性�
 
 **Ciallo～(∠・ω< )幸苦了**
 
-![ciallo.jpg](/content/machine%20learning/ciallo.jpg)
+![ciallo.jpg](ciallo.jpg)
 
 > Tips
 > 
