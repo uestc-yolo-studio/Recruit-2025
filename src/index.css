@@ -98,6 +98,124 @@
     font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
     font-weight: 600;
   }
+  
+  /* Markdown 加粗文本样式 - 增加优先级 */
+  div strong, div b, p strong, p b, section strong, section b {
+    font-weight: 700;
+    color: hsl(126.18deg 100% 85.9%) !important;
+    text-shadow: 0 0 8px rgba(126, 255, 219, 0.3);
+    padding: 0 2px;
+    border-radius: 3px;
+    background: linear-gradient(135deg, 
+      rgba(126, 255, 219, 0.1) 0%, 
+      rgba(126, 255, 219, 0.05) 100%);
+  }
+  
+  /* 暗色主题下的加粗文本样式 - 增加优先级 */
+  .dark div strong, .dark div b, .dark p strong, .dark p b, .dark section strong, .dark section b {
+    color: hsl(126.18deg 100% 85.9%) !important;
+    text-shadow: 0 0 8px rgba(126, 255, 219, 0.4);
+    background: linear-gradient(135deg, 
+      rgba(126, 255, 219, 0.15) 0%, 
+      rgba(126, 255, 219, 0.08) 100%);
+  }
+  
+  /* 特殊强调的加粗文本（如标题中的关键词） */
+  strong:has(+ strong), strong + strong {
+    color: hsl(126.18deg 100% 85.9%) !important;
+    text-shadow: 0 0 10px rgba(126, 255, 219, 0.4);
+    background: linear-gradient(135deg, 
+      rgba(126, 255, 219, 0.15) 0%, 
+      rgba(126, 255, 219, 0.08) 100%);
+  }
+  
+  .dark strong:has(+ strong), .dark strong + strong {
+    color: hsl(126.18deg 100% 85.9%) !important;
+    text-shadow: 0 0 10px rgba(126, 255, 219, 0.4);
+    background: linear-gradient(135deg, 
+      rgba(126, 255, 219, 0.15) 0%, 
+      rgba(126, 255, 219, 0.08) 100%);
+  }
+  
+  /* 加粗文本的悬停效果 */
+  strong:hover, b:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* 列表项中的加粗文本特殊样式 */
+  li strong, li b {
+    color: hsl(126.18deg 100% 85.9%) !important;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+  
+  .dark li strong, .dark li b {
+    color: hsl(126.18deg 100% 85.9%) !important;
+    text-shadow: 0 0 6px rgba(126, 255, 219, 0.5);
+  }
+  
+  /* 段落开头的加粗文本 */
+  p > strong:first-child, p > b:first-child {
+    font-size: 1.05em;
+    color: hsl(126.18deg 100% 85.9%) !important;
+    padding-left: 12px;
+    margin-left: 0;
+    position: relative;
+  }
+  
+  .dark p > strong:first-child, .dark p > b:first-child {
+    color: hsl(126.18deg 100% 85.9%) !important;
+  }
+  
+  /* 使用伪元素创建左边框，避免遮挡文字 */
+  p > strong:first-child::before, p > b:first-child::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: currentColor;
+    border-radius: 2px 0 0 2px;
+  }
+  
+  /* 加粗文本的脉冲动画效果 */
+  @keyframes strong-pulse {
+    0%, 100% {
+      text-shadow: 0 0 8px currentColor;
+    }
+    50% {
+      text-shadow: 0 0 16px currentColor, 0 0 24px currentColor;
+    }
+  }
+  
+  /* 重要加粗文本的脉冲效果 */
+  strong.important, b.important {
+    animation: strong-pulse 2s ease-in-out infinite;
+  }
+  
+  /* 加粗文本的渐变文字效果 */
+  strong.gradient, b.gradient {
+    background: linear-gradient(135deg, 
+      hsl(var(--color-gold)) 0%, 
+      hsl(var(--color-orange)) 50%, 
+      hsl(var(--color-blue)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+  }
+  
+  .dark strong.gradient, .dark b.gradient {
+    background: linear-gradient(135deg, 
+      hsl(var(--color-orange)) 0%, 
+      hsl(var(--color-gold)) 50%, 
+      hsl(var(--color-cyan)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
 
 @keyframes gradient {

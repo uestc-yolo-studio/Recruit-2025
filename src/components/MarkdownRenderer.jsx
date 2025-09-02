@@ -6,38 +6,38 @@ import Timeline from './Timeline';
 const MarkdownRenderer = ({ content, theme = 'default' }) => {
   const themeColors = {
     blue: {
-      strong: '#ffffff',
-      code: '#e1aa70',
+      strong: '#0c7eb4', // 天蓝色
+      code: 'rgb(234 234 156)',
       link: '#ffffff',
     },
     cyan: {
-      strong: '#ffffff',
-      code: '#e99a28',
+      strong: '#0c7eb4', // 天蓝色
+      code: 'rgb(234 234 156)',
       link: '#ffffff',
     },
     orange: {
-      strong: '#ffffff',
-      code: '#6da4aa',
+      strong: '#0c7eb4', // 天蓝色
+      code: 'rgb(234 234 156)',
       link: '#ffffff',
     },
     gold: {
-      strong: '#ffffff',
-      code: '#a3d4d1',
+      strong: '#0c7eb4', // 天蓝色
+      code: 'rgb(234 234 156)',
       link: '#ffffff',
     },
     lightCyan: {
-      strong: '#ffffff',
-      code: '#e99a28',
+      strong: '#0c7eb4', // 天蓝色
+      code: 'rgb(234 234 156)',
       link: '#ffffff',
     },
     purple: {
-      strong: '#ffffff',
-      code: '#e1aa70',
+      strong: '#0c7eb4', // 天蓝色
+      code: 'rgb(234 234 156)',
       link: '#ffffff',
     },
     default: {
-      strong: '#ffffff',
-      code: '#e1aa70',
+      strong: '#0c7eb4', // 天蓝色
+      code: 'rgb(234 234 156)',
       link: '#ffffff',
     }
   };
@@ -204,8 +204,12 @@ const MarkdownRenderer = ({ content, theme = 'default' }) => {
             </li>
           ),
           strong: ({children}) => (
-            <strong className="font-bold text-white" style={{color: colors.strong}}>
-              {children}
+            <strong className="font-bold text-white relative group">
+              <span className="relative z-10">
+                {children}
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-cyan-400/20 rounded-md -skew-x-6 transform scale-105 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-green-300/10 to-cyan-300/10 rounded-md transform scale-110 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
             </strong>
           ),
           em: ({children}) => (
