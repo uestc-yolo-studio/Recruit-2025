@@ -127,7 +127,7 @@ const MarkdownRenderer = ({ content, theme = 'default' }) => {
         components={{
           h1: ({children}) => (
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8 mt-10 sm:mt-12 first:mt-0 relative">
-              <div className="absolute inset-0 bg-blue-300/30 rounded-lg border border-blue-300/50 shadow-lg"></div>
+              <div className="absolute inset-0 bg-blue-300/30 rounded-lg shadow-lg"></div>
               <div className="relative z-10 px-4 sm:px-6 py-3 sm:py-4 flex items-center">
                 <div className="w-2 h-2 sm:w-3 sm:h-3 bg-blue-300 rounded-full mr-3 sm:mr-4 animate-pulse"></div>
                 <span className="text-blue-200 font-bold">
@@ -139,7 +139,7 @@ const MarkdownRenderer = ({ content, theme = 'default' }) => {
           ),
           h2: ({children}) => (
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 mt-8 sm:mt-10 first:mt-0 relative">
-              <div className="absolute inset-0 bg-orange-400/20 rounded-lg border border-orange-400/35 shadow-md"></div>
+              <div className="absolute inset-0 bg-orange-400/20 rounded-lg shadow-md"></div>
               <div className="relative z-10 px-3 sm:px-5 py-2 sm:py-3 flex items-center">
                 <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-400 rounded-full mr-2 sm:mr-3"></div>
                 <span className="text-orange-300 font-bold">
@@ -151,7 +151,7 @@ const MarkdownRenderer = ({ content, theme = 'default' }) => {
           ),
           h3: ({children}) => (
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4 mt-6 sm:mt-8 first:mt-0 relative">
-              <div className="absolute inset-0 bg-cyan-300/20 rounded-lg border border-cyan-300/30 shadow-md"></div>
+              <div className="absolute inset-0 bg-cyan-300/20 rounded-lg shadow-md"></div>
               <div className="relative z-10 px-2 sm:px-4 py-1.5 sm:py-2 flex items-center">
                 <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-cyan-300 rounded-full mr-2 sm:mr-3"></div>
                 <span className="text-cyan-200 font-semibold">
@@ -163,7 +163,7 @@ const MarkdownRenderer = ({ content, theme = 'default' }) => {
           ),
           h4: ({children}) => (
             <h4 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 mt-4 sm:mt-6 first:mt-0 relative">
-              <div className="absolute inset-0 bg-amber-400/15 rounded-lg border border-amber-400/25 shadow-sm"></div>
+              <div className="absolute inset-0 bg-amber-400/15 rounded-lg shadow-sm"></div>
               <div className="relative z-10 px-2 sm:px-3 py-1 sm:py-1.5 flex items-center">
                 <div className="w-0.5 h-0.5 sm:w-1 sm:h-1 bg-amber-400 rounded-full mr-1.5 sm:mr-2"></div>
                 <span className="text-amber-300 font-semibold">

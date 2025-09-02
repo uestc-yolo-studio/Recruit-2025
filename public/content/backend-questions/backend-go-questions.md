@@ -433,7 +433,6 @@ func main() {
 **学生表(students)**
 ![学生表](/backend-images/students-table.png)
 
-![img](https://dcn2187ziwgk.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDVjYTYzNTM3NmNjNTFmOTI2MjUxYjBjNGE5NGQ2MTVfM1FPa0xGY0VtS0ZyMGQxbEd0Z01PdElyOHFqNFJoWW5fVG9rZW46VTdmeWIySFdLb2lCUkt4RWxIcmNMaXlFbkVlXzE3NTY2MjEwNDc6MTc1NjYyNDY0N19WNA)
 
 **班级表(classes)**
 ![班级表](/backend-images/classes-table.png)
