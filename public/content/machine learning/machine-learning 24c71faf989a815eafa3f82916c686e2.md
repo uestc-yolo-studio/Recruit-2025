@@ -41,7 +41,7 @@
 
 ## 引入
 
-![Evolutionary_Tree.png](Evolutionary_Tree.png)
+![Evolutionary_Tree.png](/content/machine%20learning/Evolutionary_Tree.png)
 
 实践是检验真理的唯一标准，自从2022年11月30日ChatGPT发布以来，大语言模型已经遍地开花，站在浪潮之上，得益于开源精神，我们每个人都能掌握其中的原理
 
@@ -102,7 +102,7 @@ PyTorch框架本身基于python语法格式，python作为解释性语言，性�
 
 ### 任务一：梯度下降——灵梦与魔理沙的结界修复
 
-![Reimu_and_Marisa.png](Reimu_and_Marisa.png)
+![Reimu_and_Marisa.png](/content/machine%20learning/Reimu_and_Marisa.png)
 
 最近博丽神社的结界突然出现了异常，灵梦发现结界能量不稳，周围的灵力波动时强时弱。为了防止神社被灵力暴走毁坏，灵梦决定必须找到结界的最小能量点，稳定它的力量。她找来了擅长各种复杂魔法计算的魔理沙帮忙。
 
@@ -136,7 +136,7 @@ PyTorch框架本身基于python语法格式，python作为解释性语言，性�
 
 ### 任务二：MNIST——灵梦与琪露诺的数字大冒险
 
-[Cirno.avif](Cirno.avif)
+![Cirno.avif](/content/machine%20learning/Cirno.avif)
 
 某天，冰之妖精琪露诺来到博丽神社，兴高采烈地告诉灵梦自己刚刚在外界的某个地方听说了一种“数字挑战”。灵梦一头雾水，但看着琪露诺充满自信的样子，决定教她一点真正的技术，以免她到处闯祸。灵梦决定让琪露诺学习如何使用卷积神经网络来识别手写数字。
 
@@ -167,7 +167,7 @@ PyTorch框架本身基于python语法格式，python作为解释性语言，性�
 
 ### 任务三（附加题）：GPT-2——灵梦的AI交流计划
 
-![miku.png](miku.png)
+![miku.png](/content/machine%20learning/miku.png)
 
 某天，博丽神社的巫女博丽灵梦在闲暇时意外听说外界有一位虚拟歌手，名叫初音未来。她以非凡的歌声和独特的魅力，在外界深受人类喜爱。灵梦对这个虚拟偶像产生了极大的兴趣，心想着，能和这个“虚拟存在”交流应该是件非常有趣的事，于是她决定：**构建一个GPT-2模型**，让她可以与初音未来真正进行互动！
 
@@ -200,7 +200,7 @@ PyTorch框架本身基于python语法格式，python作为解释性语言，性�
 
 **Ciallo～(∠・ω< )幸苦了**
 
-![ciallo.jpg](ciallo.jpg)
+![ciallo.jpg](/content/machine%20learning/ciallo.jpg)
 
 > Tips
 > 
