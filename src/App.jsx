@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import { navItems, hiddenRoutes } from "./nav-items";
 import Navigation from "./components/Navigation";
 import ScrollToTop from "./components/ScrollToTop";
+import CountdownTimer from "./components/CountdownTimer";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
         <Toaster />
         <HashRouter>
           <Navigation />
+          <CountdownTimer />
           <div className="pt-16 sm:pt-20">
             <Routes>
               {navItems.map(({ to, page }) => (

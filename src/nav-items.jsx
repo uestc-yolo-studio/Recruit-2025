@@ -1,6 +1,5 @@
 import { HomeIcon, BrainCircuitIcon, ImageIcon } from "lucide-react";
 import Index from "./pages/Index.jsx";
-import CountdownPage from "./pages/CountdownPage.jsx";
 import Questions from "./pages/Questions.jsx";
 import PhotoWall from "./pages/PhotoWall.jsx";
 import { getEncryptedRoute } from "./lib/hashUtils.js";
@@ -16,7 +15,7 @@ export const navItems = [
     title: "Questions",
     to: "/questions",
     icon: <BrainCircuitIcon className="h-4 w-4" />,
-    page: <CountdownPage />,
+    page: <Questions />,
   },
   {
     title: "照片墙",
@@ -26,10 +25,5 @@ export const navItems = [
   },
 ];
 
-// 添加真正的招新题页面路由（不显示在导航中）
-export const hiddenRoutes = [
-  {
-    to: getEncryptedRoute(),
-    page: <Questions />,
-  },
-];
+// 隐藏路由已移除，Questions 页面现在直接通过导航访问
+export const hiddenRoutes = [];
