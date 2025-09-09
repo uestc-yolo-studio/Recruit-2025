@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { BrainCircuitIcon, Github, ImageIcon, Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import NavCountdown from './NavCountdown';
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ const Navigation = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="grid grid-cols-3 items-center h-16 sm:h-20">
           {/* Logo */}
           <motion.div 
             className="flex items-center cursor-pointer gap-2 sm:gap-3"
@@ -50,8 +51,13 @@ const Navigation = () => {
             </span>
           </motion.div>
 
-          {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+          {/* 中间：倒计时（所有端显示） */}
+          <div className="flex justify-center pl-4 md:pl-0">
+            <NavCountdown />
+          </div>
+
+          {/* 右侧：桌面导航链接 */}
+          <div className="hidden md:flex items-center justify-end space-x-4 lg:space-x-6">
             <motion.button
               onClick={() => handleNavigation('/')}
               className={`px-3 py-2 rounded-xl text-sm lg:text-base font-medium transition-colors ${
@@ -110,8 +116,8 @@ const Navigation = () => {
             <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-2">
+          {/* 右侧：移动端菜单按钮 */}
+          <div className="md:hidden flex items-center justify-end space-x-2">
             <ThemeToggle />
             <motion.button
               onClick={toggleMobileMenu}

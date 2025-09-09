@@ -63,7 +63,7 @@ const CountdownTimer = () => {
           isUrgent 
             ? 'from-red-900/95 via-red-800/90 to-red-900/95 border-red-400/60' 
             : 'from-slate-900/95 via-gray-900/90 to-slate-900/95 border-white/30'
-        } backdrop-blur-xl border rounded-2xl p-5 shadow-2xl overflow-hidden`}
+        } backdrop-blur-xl border rounded-2xl ${isExpanded ? 'p-5' : 'p-1'} shadow-2xl overflow-hidden`}
       >
         {/* 背景装饰效果 */}
         <div className="absolute inset-0">
@@ -156,8 +156,8 @@ const CountdownTimer = () => {
             </motion.button>
           </motion.div>
 
-          {/* 收起状态下的紧凑倒计时 */}
-          {!isExpanded && !isExpired && (
+          {/* 收起状态下的紧凑倒计时（隐藏，改为极简按钮） */}
+          {!isExpanded && false && (
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -245,28 +245,26 @@ const CountdownTimer = () => {
             </motion.div>
           )}
 
-          {/* 收起状态下的按钮 */}
+          {/* 收起状态下的小圆形按钮 */}
           {!isExpanded && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
-              className="flex justify-center mb-4"
+              className="flex justify-center mb-0"
             >
               <motion.button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
+                className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors duration-200 ${
                   isUrgent 
-                    ? 'hover:bg-red-500/20 text-red-300 bg-red-500/10' 
-                    : 'hover:bg-white/10 text-white/70 bg-white/5'
+                    ? 'hover:bg-red-500/20 text-red-300 bg-red-500/10 border border-red-400/30' 
+                    : 'hover:bg-white/10 text-white/80 bg-white/5 border border-white/20'
                 }`}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
+                title={`距截止：${timeLeft.days}天 ${timeLeft.hours.toString().padStart(2, '0')}:${timeLeft.minutes.toString().padStart(2, '0')}:${timeLeft.seconds.toString().padStart(2, '0')}`}
               >
-                <div className="flex items-center space-x-2">
-                  <ChevronDown className="h-4 w-4" />
-                  <span className="text-sm font-medium">展开详情</span>
-                </div>
+                <ChevronDown className="h-4 w-4" />
               </motion.button>
             </motion.div>
           )}
