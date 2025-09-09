@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 import AnimatedCard from '../components/AnimatedCard';
 import MarkdownRenderer from '../components/MarkdownRenderer';
 import OwlAnimation from '../components/OwlAnimation';
 import GradientBackground from '../components/GradientBackground';
 import ColorInverseArea from '../components/ColorInverseArea';
-import { ChevronLeft, Home, Lock, AlertTriangle } from 'lucide-react';
+import { ChevronLeft, Home } from 'lucide-react';
 
 const Questions = () => {
   const [frontendQuestions, setFrontendQuestions] = useState('');
@@ -21,32 +20,10 @@ const Questions = () => {
   const [selectedDirection, setSelectedDirection] = useState(null);
   const [selectedFrontendTopic, setSelectedFrontendTopic] = useState(null);
   const [selectedBackendTopic, setSelectedBackendTopic] = useState(null);
-  const [hasAccess, setHasAccess] = useState(false);
-  const [isChecking, setIsChecking] = useState(true);
-  const navigate = useNavigate();
-
-  // 检查访问权限
-  useEffect(() => {
-    const checkAccess = () => {
-      const accessToken = localStorage.getItem('yolo-recruit-access');
-      if (accessToken === 'granted') {
-        setHasAccess(true);
-      } else {
-        // 没有权限，3秒后跳转到倒计时页面
-        setTimeout(() => {
-          navigate('/questions');
-        }, 3000);
-      }
-      setIsChecking(false);
-    };
-
-    checkAccess();
-  }, [navigate]);
+  
 
   useEffect(() => {
-    // 只有在有访问权限时才加载内容
-    if (!hasAccess) return;
-
+    // 加载内容
     fetch('/content/frontend-questions.md')
       .then(res => res.text())
       .then(text => setFrontendQuestions(text));
@@ -84,7 +61,7 @@ const Questions = () => {
     fetch('/content/backend-questions/backend-go-questions.md')
       .then(res => res.text())
       .then(text => setGoQuestions(text));
-  }, [hasAccess]);
+  }, []);
 
   const frontendTopics = [
     {
@@ -182,80 +159,6 @@ const Questions = () => {
     }
   };
 
-  // 如果没有访问权限，显示权限检查页面
-  if (isChecking) {
-    return (
-      <GradientBackground>
-        <div className="relative z-10">
-          <OwlAnimation />
-          <motion.div
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16"
-          >
-            <div className="max-w-2xl mx-auto text-center">
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="mb-8"
-              >
-                <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#e1aa70] mx-auto mb-4"></div>
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[hsl(var(--text-primary))] tracking-tight mb-4">
-                  正在验证访问权限...
-                </h1>
-                <p className="text-lg text-[hsl(var(--text-secondary))]">
-                  请稍候，我们正在检查您的访问权限
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </GradientBackground>
-    );
-  }
-
-  if (!hasAccess) {
-    return (
-      <GradientBackground>
-        <div className="relative z-10">
-          <OwlAnimation />
-          <motion.div
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16"
-          >
-            <div className="max-w-2xl mx-auto text-center">
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="mb-8"
-              >
-                <AlertTriangle className="h-16 w-16 mx-auto text-red-400 mb-4" />
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[hsl(var(--text-primary))] tracking-tight mb-4">
-                  访问被拒绝
-                </h1>
-                <p className="text-lg text-[hsl(var(--text-secondary))] mb-6">
-                  您没有访问此页面的权限
-                </p>
-                <AnimatedCard className="bg-red-500/10 border-red-400/30 p-6">
-                  <p className="text-red-400 text-sm">
-                    🔒 请通过正确的入口访问招新考核题目
-                  </p>
-                  <p className="text-[hsl(var(--text-secondary))] text-sm mt-2">
-                    3秒后自动跳转到招新入口...
-                  </p>
-                </AnimatedCard>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </GradientBackground>
-    );
-  }
 
   return (
     <GradientBackground>

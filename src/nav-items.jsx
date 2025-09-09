@@ -2,7 +2,6 @@ import { HomeIcon, BrainCircuitIcon, ImageIcon } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import Questions from "./pages/Questions.jsx";
 import PhotoWall from "./pages/PhotoWall.jsx";
-import { getEncryptedRoute } from "./lib/hashUtils.js";
 
 export const navItems = [
   {
